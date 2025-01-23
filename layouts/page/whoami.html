@@ -1,0 +1,64 @@
+{{ define "main" }}
+<section class="whoami-container">
+    <head>
+        <title>Who Am I - [Your Name]</title>
+        <meta name="description" content="Hi, I'm [Your Name]. Passionate about cybersecurity, cloud technologies, and biohacking. Currently working as a Site Reliability Engineer in New York.">
+        <meta name="keywords" content="SRE, Site Reliability Engineer, DevOps, Cloud Computing, Kubernetes, Terraform, Cybersecurity, Biohacking, Technology">
+        <meta name="author" content="[Your Name]">
+        <meta property="og:title" content="Who Am I - [Your Name]">
+        <meta property="og:description" content="Passionate about cybersecurity, cloud computing, and innovation. Working as an SRE in New York.">
+        <meta property="og:image" content="https://placehold.co/400x500">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Who Am I - [Your Name]">
+        <meta name="twitter:description" content="Passionate about cybersecurity, cloud computing, and innovation.">
+    </head>
+
+    <body>
+        <nav class="social-links">
+            <a href="https://www.linkedin.com/in/yourprofile" class="social-link" target="_blank" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/yourprofile" class="social-link" target="_blank" aria-label="GitHub Profile">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/yourprofile" class="social-link" target="_blank" aria-label="Twitter Profile">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </nav>
+
+        <main class="content">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="{{ "images/profile.png" | relURL }}" alt="BOSCH Luckas profile picture">
+                </div>
+                <div class="profile-text">
+                    <h1>Hi, I'm <strong>BOSCH Luckas</strong></h1>
+                    <p>
+                        I am passionate about <strong>technology, cybersecurity, and innovation</strong>. 
+                        Currently, I work as a <strong>Site Reliability Engineer (SRE)</strong> in New York, 
+                        focusing on reliability, scalability, and performance of critical systems.
+                    </p>
+                    <p>
+                        I have a deep interest in <strong>biohacking</strong>, space exploration, and technologies like 
+                        <strong>Kubernetes</strong>, <strong>Linux</strong>, and <strong>Cloud Computing</strong>. 
+                        I enjoy to discover new stuffs and continuously expanding my knowledge.
+                    </p>
+
+                        📍 Based in New York </br>
+                        🚀 Enthusiast of DevOps and Cloud technologies </br>
+                        📚 Certified in Kubernetes (CKA), Terraform, AWS Solutions Architect </br>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <a href="mailto:your@email.com" class="contact-button" aria-label="Contact Me">Contact Me</a>
+            </div>
+        </main>
+    </body>
+
+    {{ $css := resources.Get "css/whoami.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</section>
+{{ end }}

@@ -1,0 +1,161 @@
+/* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #1e1e1e;
+    color: #ddd;
+    text-align: center;
+}
+
+/* Liens sociaux flottants */
+.social-links {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 100;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.social-link:hover {
+    transform: translateX(-10px);
+    background-color: #007bff;
+}
+
+.social-link i {
+    font-size: 1.5rem;
+}
+
+/* Contenu principal */
+.content {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Section profil */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Texte du profil */
+.profile-text {
+    max-width: 600px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile-text h1 {
+    margin-bottom: 1.5rem;
+    color: #007bff;
+    font-size: 2.5rem;
+}
+
+.profile-text p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Bouton de contact */
+.contact-section {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsivité */
+@media (max-width: 900px) {
+    .profile-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .profile-image img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .profile-text {
+        padding: 1.5rem;
+    }
+
+    .social-links {
+        right: 10px;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-link i {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 0 1rem;
+    }
+
+    .social-links {
+        flex-direction: row;
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .social-link:hover {
+        transform: translateY(-10px);
+    }
+}
