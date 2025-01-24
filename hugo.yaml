@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/"
+baseURL: "https:kubeornotto.be"
 title: KuBe Or Not To Be
 pagination.pagerSize: 5
 theme: PaperMod
